@@ -124,36 +124,25 @@ body {
 }
 
 
+.add-button{
+	margin-top: 120px;
+	margin-left: 25px;
+}
+.btn{
+	width: 100px;
+}
+
+
 .table{
-  margin-top: 50px;
+  margin-top: 5px;
   padding: 25px;
 }
 
 
-
-
-/*back btn*/
-
-  
-
-  
-  
-  
-  /* .mainminicontainer{
-	  position: absolute;
-	width: 800px;
-	height: 480px;
-	left: 289px;
-	top: 42px;
-	background: rgba(255, 255, 255, 0.68);
-	border-radius: 40px;
-  } */
-  
-
   
 
 
-	.mainminicontainer{
+.mainminicontainer{
 		position: absolute;
 		width: 800px;
 		height: 480px;
@@ -161,7 +150,7 @@ body {
 		top: 42px;
 		background: rgba(255, 255, 255, 0.68);
 		border-radius: 40px;
-	}
+}
 	
 	#apptitle {
 		position: absolute;
@@ -176,7 +165,6 @@ body {
 		color: #125465;
 	  }
 	
-
 
 
 

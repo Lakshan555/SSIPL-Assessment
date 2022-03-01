@@ -28,7 +28,11 @@ function ApplicationA() {
       <div className="mainminicontainer">
         <p id="apptitle">Application A</p>
 
-        <div className="table">
+        <div className="add-button">
+        <Link to="emp_add" className="btn btn-dark"><i className="fas fa-user-plus"></i>&nbsp;Add </Link>&nbsp;
+        </div>
+     
+        <div className="table" style={{textAlign:'center'}}>
           <table
             class="table table-ligth"
             style={{ backgroundColor: "lightblue" }}
@@ -50,8 +54,12 @@ function ApplicationA() {
                   <td>{employee.email}</td>
                   <td>{employee.mobile}</td>
                   <td>
-                    <Link to={`/edit/${employee.id}`}>edit</Link>
-                    {/* <button onClick={()=>deleteProduct(employee.id)}>delete</button> */}
+                   
+                 
+                    &nbsp;
+                    <Link  className="btn btn-primary" to={`/edit/${employee.id}`}>Update</Link>
+                    
+                                
                   </td>
                 </tr>
               ))}
