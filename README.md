@@ -5,7 +5,7 @@
 #### 1. First download or clone github repository  
 
 ```http
- git clone https://github.com/pasindubhasura/TravelApp.git
+https://github.com/Lakshan555/SSIPL-Assessment.git
 ```
 #### 2. Open the downloaded project through the IDE 
 
