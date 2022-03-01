@@ -1,9 +1,11 @@
 import express from 'express';
-import {getAllemployee,insetEmployee,updateEmployee,deleteEmployee} from "../controllers/RestApi.js"
+import {getAllemployee,insetEmployee,updateEmployee,deleteEmployee,getAllemployee2} from "../controllers/RestApi.js"
 
 const router = express.Router();
 
-router.get('/',getAllemployee);
+//route for application A and b
+router.get('/appA',getAllemployee);
+router.get('/appB',getAllemployee2);
 router.post('/', insetEmployee);
 router.put(`/:id`, updateEmployee);
 router.delete('/:id',deleteEmployee);
