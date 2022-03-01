@@ -4,6 +4,7 @@ import db from  "./config/database1.js";  //import database1
 import db2 from  "./config/database2.js"; //import database2
 import employeeRoute from './routes/routes.js';
 
+
 //invoke express
 const app = express();
 
@@ -17,6 +18,7 @@ try{
 }
 
 //use routes
+app.use(cors());
 app.use(express.json());
 app.use('/employee',employeeRoute);
 
