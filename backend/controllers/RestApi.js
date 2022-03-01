@@ -26,6 +26,21 @@ export const insetEmployee = async(req,res) => {
 
 }
 
+//getEmployee by id
+export const getEmployeeById = async(req,res) => {
+    try{
+        const employee = await Application_A.findAll({
+            where:{
+                id:req.params.id
+            }
+        });
+        res.json(employee[0]);
+    }catch(error){
+        res.json({message: error.message});
+    }
+
+}
+
 //update employee deatils to database1  & database2
 export const updateEmployee = async(req,res) => {
     try{
