@@ -1,30 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+import { useHistory,useParams } from "react-router-dom";
 import user from "../images/user.png";
 import Sidebar from "./Sidebar";
 import logout from "../images/logout.png";
 
+const  UpdateAll =() => {
+    const [name, setname] = useState("");
+    const [email, setEmail] = useState("");
+    const [mobile, setMobile] = useState("");
+    const history = useHistory();
+    const {id} = useParams();
 
-const AddEmployee = () => {
-  const [name, setname] = useState("");
-  const [email, setEmail] = useState("");
-  const [mobile, setMobile] = useState("");
-  const history = useHistory();
+    const updateEmployee = async (e)=>{
+        e.preventDefault();
+        await axios.put(`http://localhost:5001/employee/${id}`,{
+            name: name,
+            email: email,
+            mobile: mobile,
+        });
+        history.push("/appA");
+    }
+    useEffect(()=>{
+        getEmployeeById();
+    }, []);
 
-  //inset employee data 
-  const insetEmployee = async (e) => {
-    e.preventDefault();
-    await axios.post("http://localhost:5001/employee", {
-      name: name,
-      email: email,
-      mobile: mobile,
-    });
-    history.push("/appA");
-  };
+    const getEmployeeById = async () => {
+          const response = await axios.get(`http://localhost:5001/employee/${id}`);
+          setname(response.data.name);
+          setEmail(response.data.email);
+          setMobile(response.data.mobile);
+    }
 
-  return (
+    return(
     <div className="MainContainer">
       <div className="containermini">
         <img src={user} className="user" />
@@ -38,7 +47,7 @@ const AddEmployee = () => {
                         <div className="row rtitle" style={{ marginTop: '100px' }}>
                            
                             <div className="col-md-12 col-sm-12 col-lg-12 position-relative text-center">
-                                <h3 className='display-9 fw-bold'>Add Employee</h3>
+                                <h3 className='display-9 fw-bold'>Update Employee</h3>
                                
                             </div>
                             <hr className="hr" style={{ height: '2px', color: '#0a90e8' }} />
@@ -49,7 +58,7 @@ const AddEmployee = () => {
                         <div className="col-md-2 col-sm-2 col-lg-2"/>
                         <div className="col-md-8 col-sm-8 col-lg-8">
                             <div className="shadowBox">
-                                <form onSubmit={insetEmployee} >
+                                <form onSubmit={updateEmployee} >
                                 <div className='form-tab' >
                                       
                                         <div className='form-group col-md-5' style={{ marginTop: '15px' }}>
@@ -99,6 +108,6 @@ const AddEmployee = () => {
       </div>
      
     </div>
-  );
-};
-export default AddEmployee;
+    )
+}
+export default UpdateAll

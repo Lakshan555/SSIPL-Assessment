@@ -12,6 +12,7 @@ function ApplicationA() {
     getEmployees();
   }, []);
 
+  //get all insrterd data from first database
   const getEmployees = async () => {
     const response = await axios.get("http://localhost:5001/employee/appA");
     setemployee(response.data);
@@ -57,7 +58,7 @@ function ApplicationA() {
                    
                  
                     &nbsp;
-                    <Link  className="btn btn-primary" to={`/edit/${employee.id}`}>Update</Link>
+                    <Link  className="btn btn-primary" to={`/update/${employee.id}`}>Update</Link>
                     
                                 
                   </td>
