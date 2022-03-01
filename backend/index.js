@@ -1,12 +1,17 @@
 import express from  "express";
 import cors from "cors";
+import db from  "./config/database1.js";
 
 //invoke express
 const app = express();
 
-app.get('/',(req,res)=>{
-    res.send('welocme');
-})
+
+try{
+    await db.authenticate();
+    console.log('Database connected...');
+}catch(error){
+    console.error('connection error:',error);
+}
 
 
 
