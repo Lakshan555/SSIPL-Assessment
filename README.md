@@ -22,10 +22,10 @@ https://github.com/Lakshan555/SSIPL-Assessment.git
 
 
 **Screenshots**
-![home](https://user-images.githubusercontent.com/79820853/156173303-89f6599c-0642-405b-8df5-3b8fc32a1867.png)
+![home](https://user-images.githubusercontent.com/79820853/156173519-735c7a1b-3923-4abf-b0e8-3007aa80efc1.png)
 
 **Application A**
-![Application A](https://user-images.githubusercontent.com/79820853/156173337-8c76e84a-477d-4af6-b748-f48d0aea8f31.png)
+![Application A](https://user-images.githubusercontent.com/79820853/156173753-e61186b7-0e29-4b61-a6a7-6e78dd5e381f.png)
 
 **Application B**
-![ApplicationB](https://user-images.githubusercontent.com/79820853/156173347-83e99e14-e98e-4fda-81f6-b7f2395f5d14.png)
+![ApplicationB](https://user-images.githubusercontent.com/79820853/156173819-0eadf7b8-3af1-403a-9c7d-91c10b98f0b0.png)
