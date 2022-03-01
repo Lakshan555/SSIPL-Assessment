@@ -1,101 +1,99 @@
 .App {
-	width: 100vw;
-	height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-	padding: 0;
-	margin: 0;
-	background-color: #4D97FB;
-	position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: #4d97fb;
+  position: relative;
 }
 
 .Sidebar {
-	width: 240px;
-	margin-top: 220px;
+  width: 240px;
+  margin-top: 220px;
 }
 
 .SidebarList {
-	height: auto;
-	padding: 0;
-	width: 100%;
-	font-family: "Poppins", sans-serif;
-	list-style-type: none;
+  height: auto;
+  padding: 0;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  list-style-type: none;
 }
 
 .SidebarList .row {
-	width: 100%;
-	height: 40px;
-	list-style-type: none;
-	margin: 0%;
-	color: #272727;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding-left: 0px;
-	text-decoration: none;
+  width: 100%;
+  height: 40px;
+  list-style-type: none;
+  margin: 0%;
+  color: #272727;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0px;
+  text-decoration: none;
 }
 
 .SidebarList .row:hover {
-	cursor: pointer;
-	background-color: #f6faff;
-	border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  background-color: #f6faff;
+  border-radius: 0 30px 30px 0;
   transition: 0.2s;
 }
 
 /* main transparent view */
 .MainContainer {
-	position: absolute;
-	margin: auto;
-	width: 1140px;
-	height: 560px;
-	right: 80px;
-	left: 80px;
-	top: 80px;
-	bottom: 80px;
-	background: rgba(255, 255, 255, 0.51);
-	border-radius: 40px;
+  position: absolute;
+  margin: auto;
+  width: 1140px;
+  height: 560px;
+  right: 80px;
+  left: 80px;
+  top: 80px;
+  bottom: 80px;
+  background: rgba(255, 255, 255, 0.51);
+  border-radius: 40px;
 }
-
 
 .containermini {
-	position: absolute;
-	width: 240px;
-	height: 560px;
-	right: 80px;
-	left: 0;
-	top: 0;
-	bottom: 80px;
-	background: rgba(255, 255, 255, 0.68);
-	backdrop-filter: blur(5px);
-	border-radius: 40px 0px 0px 40px;
+  position: absolute;
+  width: 240px;
+  height: 560px;
+  right: 80px;
+  left: 0;
+  top: 0;
+  bottom: 80px;
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(5px);
+  border-radius: 40px 0px 0px 40px;
 }
 
-
 .user {
-	position: absolute;
-	width: 104px;
-	height: 104px;
-	left: 67px;
-	top: 106px;
+  position: absolute;
+  width: 104px;
+  height: 104px;
+  left: 67px;
+  top: 106px;
 }
 
 .logout {
-	position: absolute;
-	width: 21.75px;
-	height: 27.6px;
-	left: 110px;
-	top: 520px;
+  position: absolute;
+  width: 21.75px;
+  height: 27.6px;
+  left: 110px;
+  top: 520px;
 }
 
-.homebox1{
-	position: absolute;
+.homebox1 {
+  position: absolute;
   width: 800px;
   height: 480px;
   left: 289px;
@@ -104,17 +102,15 @@ body {
   border-radius: 40px;
 }
 
-
-.homeVector{
+.homeVector {
   margin-left: 265px;
   width: 285.01px;
   height: 289px;
   left: 25px;
   top: 11px;
-
 }
 
-.welcm-name{
+.welcm-name {
   text-align: center;
   font-size: 26px;
   color: #125465;
@@ -123,49 +119,67 @@ body {
   line-height: 36px;
 }
 
-
-.add-button{
-	margin-top: 120px;
-	margin-left: 25px;
+.add-button {
+  margin-top: 120px;
+  margin-left: 25px;
 }
-.btn{
-	width: 100px;
+.btn {
+  width: 100px;
 }
 
-
-.table{
+.table {
   margin-top: 5px;
   padding: 25px;
 }
 
-
-  
-
-
-.mainminicontainer{
-		position: absolute;
-		width: 800px;
-		height: 480px;
-		left: 289px;
-		top: 42px;
-		background: rgba(255, 255, 255, 0.68);
-		border-radius: 40px;
+.mainminicontainer {
+  position: absolute;
+  width: 800px;
+  height: 480px;
+  left: 289px;
+  top: 42px;
+  background: rgba(255, 255, 255, 0.68);
+  border-radius: 40px;
 }
-	
-	#apptitle {
-		position: absolute;
-		margin-top: 40px;
-		margin-left: 50px;
-		font-family: "Poppins", sans-serif;
-		font-style: bold;
-		font-weight: 500;
-		font-size: 54px;
-		line-height: 26px;
-		text-align: center;
-		color: #125465;
-	  }
-	
 
+#apptitle {
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 50px;
+  font-family: "Poppins", sans-serif;
+  font-style: bold;
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 26px;
+  text-align: center;
+  color: #125465;
+}
 
+.shadowBox {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  opacity: 0.9;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+}
 
-	
+.shadowBoxForm {
+  margin-top: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  opacity: 0.9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.shadowBox input {
+  border-radius: 5px;
+  width: 400px;
+  border-color: #00ccff5d;
+}
+
+.btn-form {
+  margin-top: 2px;
+  margin-left: 75px;
+}
