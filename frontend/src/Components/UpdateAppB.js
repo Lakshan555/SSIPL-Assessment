@@ -6,31 +6,25 @@ import user from "../images/user.png";
 import Sidebar from "./Sidebar";
 import logout from "../images/logout.png";
 
-const  UpdateAll =() => {
-    const [name, setname] = useState("");
-    const [email, setEmail] = useState("");
-    const [mobile, setMobile] = useState("");
+const  UpdateAppB =() => {
+    const [address, setaddress] = useState("");
     const history = useHistory();
     const {id} = useParams();
 
     const updateEmployee = async (e)=>{
         e.preventDefault();
         await axios.put(`http://localhost:5001/employee/${id}`,{
-            name: name,
-            email: email,
-            mobile: mobile,
+           address:address
         });
-        history.push("/appA");
+        history.push("/appB");
     }
     useEffect(()=>{
         getEmployeeById();
     }, []);
 
     const getEmployeeById = async () => {
-          const response = await axios.get(`http://localhost:5001/employee/${id}`);
-          setname(response.data.name);
-          setEmail(response.data.email);
-          setMobile(response.data.mobile);
+          const response = await axios.get(`http://localhost:5001/employee/appB/${id}`);
+          setaddress(response.data.address);
     }
 
     return(
@@ -62,38 +56,21 @@ const  UpdateAll =() => {
                                 <div className='form-tab' >
                                       
                                         <div className='form-group col-md-5' style={{ marginTop: '15px' }}>
-                                        <label >Name </label>
+                                        <label >Address </label>
                                             <input className="input" 
-                                            value ={name} 
-                                            onChange={(e)=>setname(e.target.value)} 
+                                            value ={address} 
+                                            onChange={(e)=>setaddress(e.target.value)} 
                                             type="text" 
                                             required
-                                            placeholder="Enter Name"></input>
+                                           ></input>
                                             
                                                                                    
                                         </div>
-                                        <div className='form-group col-md-5' style={{ marginTop: '15px' }}>
-                                            <label >Email</label>
-                                            <input className="input" 
-                                            type="text" 
-                                            placeholder="Enter Email" 
-                                            required
-                                            value ={email} 
-                                            onChange={(e)=>setEmail(e.target.value)}></input>                          
-                                        </div>
-                                        <div className='form-group col-md-5' style={{ marginTop: '15px' }}>
-                                            <label >Mobile No:</label>
-                                            <input className="input" 
-                                            type="text" 
-                                            placeholder="Enter mobile no" 
-                                            required
-                                            value ={mobile} 
-                                            onChange={(e)=>setMobile(e.target.value)}></input>                         
-                                        </div>
+                                        
                                         
                                         <div className="btn-form">
                             
-                                        <button type="submit" className="btn btn-primary sub_btn" ><i class="far fa-save"></i>&nbsp;update</button>
+                                        <button type="submit" className="btn btn-primary sub_btn" ><i class="far fa-save"></i>&nbsp;Update</button>
                                         </div>
                                       
                                         <div className='form-group col-md-1' style={{ marginTop: '15px' }}/>
@@ -110,4 +87,4 @@ const  UpdateAll =() => {
     </div>
     )
 }
-export default UpdateAll
+export default UpdateAppB
