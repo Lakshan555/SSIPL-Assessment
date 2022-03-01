@@ -6,6 +6,9 @@ GET http://localhost:5001/employee/appB
 ###
 GET http://localhost:5001/employee/1
 
+###
+GET http://localhost:5001/employee/appB/1
+
 
 ###
 POST http://localhost:5001/employee 

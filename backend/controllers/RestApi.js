@@ -26,7 +26,7 @@ export const insetEmployee = async(req,res) => {
 
 }
 
-//getEmployee by id
+//getEmployee by id database 1
 export const getEmployeeById = async(req,res) => {
     try{
         const employee = await Application_A.findAll({
@@ -77,6 +77,8 @@ export const deleteEmployee = async(req,res) => {
 }
 
 //=========================================================
+//second database releated REST APIS
+
 
 //get all employe deatils in database2
 export const getAllemployee2 = async(req,res) => {
@@ -84,6 +86,21 @@ export const getAllemployee2 = async(req,res) => {
     try{
         const employee = await Application_B.findAll();
         res.json(employee);
+    }catch(error){
+        res.json({message: error.message});
+    }
+
+}
+
+//getEmployee by id database 2
+export const getEmployeeById2 = async(req,res) => {
+    try{
+        const employee = await Application_B.findAll({
+            where:{
+                id:req.params.id
+            }
+        });
+        res.json(employee[0]);
     }catch(error){
         res.json({message: error.message});
     }
