@@ -19,9 +19,9 @@ https://github.com/Lakshan555/SSIPL-Assessment.git
 #### 1. Start both backend  and frontend
 ```
     npm start
+```
 
-
-**Screenshots**
+**screenshots**
 ![home](https://user-images.githubusercontent.com/79820853/156173519-735c7a1b-3923-4abf-b0e8-3007aa80efc1.png)
 
 **Application A**
