@@ -1,0 +1,24 @@
+GET http://localhost:5001/employee
+
+###
+POST http://localhost:5001/employee 
+content-Type: application/json
+
+{
+    "name":"ishanka",
+    "email":"ish@gmail.com",
+    "mobile": 44444
+}
+
+###
+PUT  http://localhost:5001/employee/1
+content-Type: application/json
+
+{
+    "name":"ishanka",
+    "email":"ish@gmail.com",
+    "mobile": 54
+}
+
+###
+DELETE  http://localhost:5001/employee/1
